@@ -22,7 +22,8 @@ body{
 
     font-family:Tahoma,sans-serif;
 
-    background:linear-gradient(135deg,#80cbc4,#e0f2f1);
+    background:
+    linear-gradient(135deg,#80cbc4,#e0f2f1);
 
     min-height:100vh;
 
@@ -38,67 +39,169 @@ body{
 
 
 
-/* ใบไม้ลอย */
+/* แสงพื้นหลัง */
+
+body::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:500px;
+
+    height:500px;
+
+    background:white;
+
+    opacity:0.25;
+
+    border-radius:50%;
+
+    filter:blur(80px);
+
+    top:10%;
+
+    left:10%;
+
+}
+
+
+
+/* ใบไม้สีขาว */
 
 .leaf{
 
     position:absolute;
 
-    font-size:35px;
+    color:white;
 
-    animation:float 8s infinite linear;
+    font-size:45px;
 
-    opacity:0.7;
+    opacity:0.8;
+
+    animation:leafMove linear infinite;
+
+    text-shadow:
+    0 0 10px white;
 
 }
 
+
+
+/* ตำแหน่งใบไม้ */
 
 .leaf:nth-child(1){
-    left:10%;
-    animation-duration:9s;
+
+    left:5%;
+
+    animation-duration:10s;
+
 }
+
 
 .leaf:nth-child(2){
-    left:30%;
-    animation-duration:12s;
+
+    left:20%;
+
+    animation-duration:14s;
+
+    font-size:35px;
+
 }
+
 
 .leaf:nth-child(3){
-    left:60%;
-    animation-duration:10s;
+
+    left:40%;
+
+    animation-duration:11s;
+
+    font-size:55px;
+
 }
+
 
 .leaf:nth-child(4){
+
+    left:65%;
+
+    animation-duration:15s;
+
+}
+
+
+.leaf:nth-child(5){
+
     left:85%;
-    animation-duration:13s;
-}
 
+    animation-duration:12s;
 
-
-@keyframes float{
-
-    0%{
-
-        top:100%;
-
-        transform:rotate(0deg);
-
-    }
-
-
-    100%{
-
-        top:-10%;
-
-        transform:rotate(360deg);
-
-    }
+    font-size:40px;
 
 }
 
 
 
-/* กล่องข้อมูล */
+/* เอฟเฟกต์ลอย */
+
+@keyframes leafMove{
+
+
+0%{
+
+    top:110%;
+
+    transform:
+    translateX(0)
+    rotate(0deg);
+
+}
+
+
+25%{
+
+    transform:
+    translateX(50px)
+    rotate(90deg);
+
+}
+
+
+50%{
+
+    transform:
+    translateX(-50px)
+    rotate(180deg);
+
+}
+
+
+75%{
+
+    transform:
+    translateX(50px)
+    rotate(270deg);
+
+}
+
+
+100%{
+
+    top:-20%;
+
+    transform:
+    translateX(0)
+    rotate(360deg);
+
+}
+
+
+}
+
+
+
+
+/* กล่องหลัก */
 
 .container{
 
@@ -106,45 +209,101 @@ body{
 
     max-width:90%;
 
-    background:white;
+    background:
+    rgba(255,255,255,0.9);
 
     padding:40px;
 
-    border-radius:30px;
+    border-radius:35px;
 
     text-align:center;
-
-    box-shadow:0 15px 35px rgba(0,0,0,0.25);
 
     position:relative;
 
     z-index:2;
 
+
+    box-shadow:
+
+    0 20px 40px rgba(0,0,0,0.25);
+
+
+    animation:show 1s;
+
 }
 
 
+
+@keyframes show{
+
+
+from{
+
+    opacity:0;
+
+    transform:
+    translateY(50px)
+    scale(0.9);
+
+}
+
+
+to{
+
+    opacity:1;
+
+    transform:
+    translateY(0)
+    scale(1);
+
+}
+
+
+}
+
+
+
+/* หัวข้อ */
 
 h1{
 
     color:#00695c;
 
-    font-size:38px;
+    font-size:40px;
+
+    text-shadow:
+    0 3px 5px rgba(0,0,0,0.15);
 
 }
 
 
 
+/* กล่องข้อมูล */
+
 .profile-box{
 
-    background:#e0f2f1;
+    background:
+
+    linear-gradient(
+    135deg,
+    #e0f2f1,
+    #ffffff
+    );
+
 
     padding:25px;
 
-    border-radius:20px;
+    border-radius:25px;
 
     text-align:left;
 
     margin-top:25px;
+
+
+    box-shadow:
+
+    inset 0 0 15px rgba(38,166,154,0.2);
+
 
 }
 
@@ -172,13 +331,15 @@ h1{
 
 
 
+/* ปุ่มกลับ */
+
 .back{
 
     display:inline-block;
 
     margin-top:30px;
 
-    padding:12px 30px;
+    padding:14px 35px;
 
     background:#26a69a;
 
@@ -190,34 +351,41 @@ h1{
 
     font-weight:bold;
 
-    box-shadow:0 5px 15px rgba(0,0,0,0.2);
 
-    transition:0.3s;
+    box-shadow:
+
+    0 8px 15px rgba(0,0,0,0.25);
+
+
+    transition:.3s;
 
 }
+
 
 
 .back:hover{
 
     background:#00695c;
 
-    transform:translateY(-5px);
+    transform:
+    translateY(-8px);
+
+    box-shadow:
+
+    0 15px 25px rgba(0,0,0,0.35);
 
 }
 
 
-
 </style>
 
-
 </head>
-
 
 
 <body>
 
 
-<!-- ใบไม้ -->
+<!-- ใบไม้สีขาว -->
 
 <div class="leaf">🍃</div>
 
@@ -226,6 +394,8 @@ h1{
 <div class="leaf">🍃</div>
 
 <div class="leaf">🌱</div>
+
+<div class="leaf">🍀</div>
 
 
 
@@ -263,20 +433,23 @@ h1{
 </p>
 
 
-
 <p>
 <span class="icon">🏫 ประวัติการศึกษา :</span>
 </p>
 
 
 <p>
+
 🌱 อนุบาล : โรงเรียนวัฒนานุศาสน์
+
 <br>
 
 📚 ประถมศึกษา : โรงเรียนวัฒนานุศาสน์
+
 <br>
 
 📖 มัธยมศึกษาตอนต้น : โรงเรียนวัฒนานุศาสน์
+
 <br>
 
 🎓 มัธยมศึกษาตอนปลาย : โรงเรียนพานทอง
