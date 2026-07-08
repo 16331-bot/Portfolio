@@ -16,10 +16,19 @@
             width:800px;
             margin:40px auto;
             background:white;
-            border-radius:20px;
-            padding:30px;
+            border-radius:25px;
+            padding:40px;
             text-align:center;
-            box-shadow:0 0 20px rgba(0,0,0,0.2);
+            box-shadow:0 8px 20px rgba(0,0,0,0.25);
+        }
+
+        /* กรอบรูป */
+        .photo{
+            display:inline-block;
+            padding:10px;
+            background:#ffffff;
+            border-radius:50%;
+            box-shadow:0 8px 20px rgba(0,0,0,0.25);
         }
 
         img{
@@ -32,33 +41,37 @@
 
         h1{
             color:#00695c;
-            margin-top:20px;
+            margin-top:25px;
+            font-size:36px;
         }
 
         p{
-            font-size:20px;
+            font-size:22px;
             color:#444;
+            margin:8px;
         }
 
         .menu{
-            margin-top:30px;
+            margin-top:35px;
         }
 
         .menu a{
             text-decoration:none;
             background:#26a69a;
             color:white;
-            padding:12px 20px;
-            margin:10px;
-            border-radius:25px;
+            padding:12px 22px;
+            margin:8px;
+            border-radius:30px;
             display:inline-block;
+            font-size:18px;
             font-weight:bold;
+            box-shadow:0 4px 10px rgba(0,0,0,0.2);
             transition:0.3s;
         }
 
         .menu a:hover{
             background:#00695c;
-            transform:scale(1.05);
+            transform:translateY(-3px);
         }
     </style>
 </head>
@@ -67,18 +80,22 @@
 
     <div class="container">
 
-        <img src="images/Screenshot 2026-06-24 112036.png" alt="รูปภาพของสุรัสวดี">
+        <div class="photo">
+            <img src="images/Screenshot 2026-06-24 112036.png" alt="รูปภาพของสุรัสวดี">
+        </div>
 
-        <h1>นางสาวสุรัสวดี วิเศษศรี</h1>
+        <h1>🌿 Portfolio 🌿</h1>
 
-        <p>นักเรียนชั้นมัธยมศึกษาปีที่ 6/1</p>
-        <p>โรงเรียนพานทอง</p>
+        <h2 style="color:#00695c;">นางสาวสุรัสวดี วิเศษศรี</h2>
+
+        <p>🎓 นักเรียนชั้นมัธยมศึกษาปีที่ 6/1</p>
+        <p>🏫 โรงเรียนพานทอง</p>
 
         <div class="menu">
-            <a href="profile.html">ประวัติส่วนตัว</a>
-            <a href="education.html">ประวัติการศึกษา</a>
-            <a href="award.html">ผลงาน</a>
-            <a href="contact.html">ช่องทางการติดต่อ</a>
+            <a href="profile.html">👤 ประวัติส่วนตัว</a>
+            <a href="education.html">📚 ประวัติการศึกษา</a>
+            <a href="award.html">🏆 ผลงาน</a>
+            <a href="contact.html">📞 ช่องทางการติดต่อ</a>
         </div>
 
     </div>
