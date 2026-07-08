@@ -1,117 +1,276 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio สุรัสวดี วิเศษศรี</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        body{
-            margin:0;
-            font-family:Tahoma,sans-serif;
-            background:linear-gradient(to right,#80cbc4,#b2dfdb);
-        }
+<title>Portfolio สุรัสวดี วิเศษศรี</title>
 
-        .container{
-            width:1000px;
-            max-width:90%;
-            margin:40px auto;
-            background:white;
-            border-radius:25px;
-            padding:40px;
-            text-align:center;
-            box-shadow:0 8px 20px rgba(0,0,0,0.25);
-        }
+<style>
 
-        /* กรอบรูป */
-        .photo{
-            display:inline-block;
-            padding:10px;
-            background:white;
-            border-radius:50%;
-            box-shadow:0 8px 20px rgba(0,0,0,0.25);
-        }
+*{
+    box-sizing:border-box;
+}
 
-        img{
-            width:220px;
-            height:220px;
-            border-radius:50%;
-            border:6px solid #26a69a;
-            object-fit:cover;
-        }
+body{
+    margin:0;
+    font-family:Tahoma,sans-serif;
+    background:linear-gradient(135deg,#80cbc4,#e0f2f1);
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
 
-        h1{
-            color:#00695c;
-            margin-top:25px;
-            font-size:36px;
-        }
 
-        h2{
-            color:#00695c;
-        }
+/* กล่อง Portfolio */
 
-        p{
-            font-size:22px;
-            color:#444;
-            margin:8px;
-        }
+.container{
+    width:1000px;
+    max-width:90%;
 
-        /* เมนู */
-        .menu{
-            margin-top:35px;
-            display:flex;
-            justify-content:center;
-            align-items:center;
-            gap:15px;
-        }
+    background:rgba(255,255,255,0.9);
 
-        .menu a{
-            width:180px;
-            text-align:center;
-            text-decoration:none;
-            background:#26a69a;
-            color:white;
-            padding:15px 0;
-            border-radius:30px;
-            font-size:18px;
-            font-weight:bold;
-            box-shadow:0 5px 12px rgba(0,0,0,0.25);
-            transition:all 0.3s ease;
-        }
+    border-radius:30px;
 
-        /* เอฟเฟกต์เมาส์ชี้ */
-        .menu a:hover{
-            background:#00695c;
-            transform:translateY(-5px);
-            box-shadow:0 10px 20px rgba(0,0,0,0.35);
-        }
+    padding:50px;
 
-    </style>
+    text-align:center;
+
+    box-shadow:
+    0 15px 35px rgba(0,0,0,0.25);
+
+    animation:show 1s;
+}
+
+
+/* เปิดหน้าแบบนุ่ม */
+
+@keyframes show{
+
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+
+
+/* รูปภาพ */
+
+.photo{
+
+    width:250px;
+    height:250px;
+
+    margin:auto;
+
+    padding:12px;
+
+    border-radius:50%;
+
+    background:white;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,0.3);
+
+}
+
+
+.photo img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    border-radius:50%;
+
+    border:7px solid #26a69a;
+
+}
+
+
+
+/* ตัวหนังสือ */
+
+h1{
+
+    color:#00695c;
+
+    font-size:42px;
+
+    margin-top:25px;
+
+}
+
+
+h2{
+
+    color:#00897b;
+
+    font-size:28px;
+
+}
+
+
+p{
+
+    font-size:22px;
+
+    color:#444;
+
+}
+
+
+
+/* เมนู */
+
+.menu{
+
+    margin-top:40px;
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+}
+
+
+
+.menu a{
+
+    width:190px;
+
+    padding:18px 10px;
+
+    background:#26a69a;
+
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:25px;
+
+
+    font-size:18px;
+
+    font-weight:bold;
+
+
+    box-shadow:
+    0 8px 15px rgba(0,0,0,0.25);
+
+
+    transition:.3s;
+
+}
+
+
+
+.menu a:hover{
+
+    background:#00695c;
+
+    transform:translateY(-8px);
+
+    box-shadow:
+    0 15px 25px rgba(0,0,0,0.35);
+
+}
+
+
+/* มือถือ */
+
+@media(max-width:800px){
+
+    .menu{
+
+        flex-direction:column;
+
+    }
+
+
+    .menu a{
+
+        width:100%;
+
+    }
+
+}
+
+
+</style>
+
 </head>
+
 
 <body>
 
-    <div class="container">
 
-        <div class="photo">
-            <img src="images/Screenshot 2026-06-24 112036.png" alt="รูปภาพของสุรัสวดี">
-        </div>
+<div class="container">
 
-        <h1>🌿 Portfolio 🌿</h1>
 
-        <h2>นางสาวสุรัสวดี วิเศษศรี</h2>
+<div class="photo">
 
-        <p>🎓 นักเรียนชั้นมัธยมศึกษาปีที่ 6/1</p>
-        <p>🏫 โรงเรียนพานทอง</p>
+<img src="images/Screenshot 2026-06-24 112036.png"
+alt="รูปภาพของสุรัสวดี">
 
-        <div class="menu">
-            <a href="profile.html">👤 ประวัติส่วนตัว</a>
-            <a href="education.html">📚 ประวัติการศึกษา</a>
-            <a href="award.html">🏆 ผลงาน</a>
-            <a href="contact.html">📞 ช่องทางการติดต่อ</a>
-        </div>
+</div>
 
-    </div>
+
+<h1>🌿 PORTFOLIO 🌿</h1>
+
+
+<h2>นางสาวสุรัสวดี วิเศษศรี</h2>
+
+
+<p>🎓 นักเรียนชั้นมัธยมศึกษาปีที่ 6/1</p>
+
+<p>🏫 โรงเรียนพานทอง</p>
+
+
+
+<div class="menu">
+
+
+<a href="profile.html">
+👤<br>
+ประวัติส่วนตัว
+</a>
+
+
+<a href="education.html">
+📚<br>
+ประวัติการศึกษา
+</a>
+
+
+<a href="award.html">
+🏆<br>
+ผลงาน
+</a>
+
+
+<a href="contact.html">
+📞<br>
+ช่องทางการติดต่อ
+</a>
+
+
+</div>
+
+
+</div>
+
 
 </body>
 </html>
