@@ -1,13 +1,302 @@
 <!DOCTYPE html>
-<html>
+<html lang="th">
+
 <head>
-    <title>ประวัติส่วนตัว</title>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ประวัติส่วนตัว สุรัสวดี วิเศษศรี</title>
+
+
+<style>
+
+*{
+    box-sizing:border-box;
+}
+
+
+body{
+
+    margin:0;
+
+    font-family:Tahoma,sans-serif;
+
+    background:linear-gradient(135deg,#80cbc4,#e0f2f1);
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    overflow:hidden;
+
+}
+
+
+
+/* ใบไม้ลอย */
+
+.leaf{
+
+    position:absolute;
+
+    font-size:35px;
+
+    animation:float 8s infinite linear;
+
+    opacity:0.7;
+
+}
+
+
+.leaf:nth-child(1){
+    left:10%;
+    animation-duration:9s;
+}
+
+.leaf:nth-child(2){
+    left:30%;
+    animation-duration:12s;
+}
+
+.leaf:nth-child(3){
+    left:60%;
+    animation-duration:10s;
+}
+
+.leaf:nth-child(4){
+    left:85%;
+    animation-duration:13s;
+}
+
+
+
+@keyframes float{
+
+    0%{
+
+        top:100%;
+
+        transform:rotate(0deg);
+
+    }
+
+
+    100%{
+
+        top:-10%;
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+
+
+/* กล่องข้อมูล */
+
+.container{
+
+    width:800px;
+
+    max-width:90%;
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:30px;
+
+    text-align:center;
+
+    box-shadow:0 15px 35px rgba(0,0,0,0.25);
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+
+
+h1{
+
+    color:#00695c;
+
+    font-size:38px;
+
+}
+
+
+
+.profile-box{
+
+    background:#e0f2f1;
+
+    padding:25px;
+
+    border-radius:20px;
+
+    text-align:left;
+
+    margin-top:25px;
+
+}
+
+
+
+.profile-box p{
+
+    font-size:20px;
+
+    color:#444;
+
+    line-height:1.8;
+
+}
+
+
+
+.icon{
+
+    color:#00695c;
+
+    font-weight:bold;
+
+}
+
+
+
+.back{
+
+    display:inline-block;
+
+    margin-top:30px;
+
+    padding:12px 30px;
+
+    background:#26a69a;
+
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:30px;
+
+    font-weight:bold;
+
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+
+    transition:0.3s;
+
+}
+
+
+.back:hover{
+
+    background:#00695c;
+
+    transform:translateY(-5px);
+
+}
+
+
+
+</style>
+
+
 </head>
+
+
+
 <body>
-<h1>ประวัติส่วนตัว</h1>
+
+
+<!-- ใบไม้ -->
+
+<div class="leaf">🍃</div>
+
+<div class="leaf">🌿</div>
+
+<div class="leaf">🍃</div>
+
+<div class="leaf">🌱</div>
+
+
+
+<div class="container">
+
+
+<h1>🌿 ประวัติส่วนตัว 🌿</h1>
+
+
+
+<div class="profile-box">
+
+
 <p>
-ชื่อ สุรัสวดี วิเศษศรี <br>
-ชื่อเล่น โม <br>
+<span class="icon">👤 ชื่อ :</span>
+สุรัสวดี วิเศษศรี
 </p>
+
+
+<p>
+<span class="icon">💗 ชื่อเล่น :</span>
+โม
+</p>
+
+
+<p>
+<span class="icon">📞 เบอร์โทร :</span>
+0618219692
+</p>
+
+
+<p>
+<span class="icon">🎓 ระดับชั้น :</span>
+มัธยมศึกษาปีที่ 6/1
+</p>
+
+
+
+<p>
+<span class="icon">🏫 ประวัติการศึกษา :</span>
+</p>
+
+
+<p>
+🌱 อนุบาล : โรงเรียนวัฒนานุศาสน์
+<br>
+
+📚 ประถมศึกษา : โรงเรียนวัฒนานุศาสน์
+<br>
+
+📖 มัธยมศึกษาตอนต้น : โรงเรียนวัฒนานุศาสน์
+<br>
+
+🎓 มัธยมศึกษาตอนปลาย : โรงเรียนพานทอง
+
+</p>
+
+
+</div>
+
+
+
+<a class="back" href="index.html">
+🏠 กลับหน้าหลัก
+</a>
+
+
+
+</div>
+
+
 </body>
+
 </html>
