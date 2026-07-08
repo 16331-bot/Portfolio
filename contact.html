@@ -1,0 +1,260 @@
+<section class="contact-section">
+
+    <!-- เอฟเฟกต์ใบไม้ -->
+    <div class="leaf">🍃</div>
+    <div class="leaf">🍂</div>
+    <div class="leaf">🍃</div>
+    <div class="leaf">🍂</div>
+    <div class="leaf">🍃</div>
+    <div class="leaf">🍂</div>
+    <div class="leaf">🍃</div>
+    <div class="leaf">🍂</div>
+
+    <div class="contact-card">
+
+        <h1>📞 Contact Me</h1>
+
+        <p class="subtitle">
+            สามารถติดต่อฉันได้ตามช่องทางด้านล่าง
+        </p>
+
+        <div class="info">
+            <span>📱</span>
+            <div>
+                <h3>Phone</h3>
+                <p>061-821-9692</p>
+            </div>
+        </div>
+
+        <div class="info">
+            <span>✉️</span>
+            <div>
+                <h3>Email</h3>
+                <p>veesesri552@gmail.com</p>
+            </div>
+        </div>
+
+        <div class="info">
+            <span>💚</span>
+            <div>
+                <h3>Line</h3>
+                <p>veesit522.t5262t</p>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+}
+
+.contact-section{
+
+width:100%;
+min-height:100vh;
+background:linear-gradient(135deg,#80cbc4,#e0f2f1);
+display:flex;
+justify-content:center;
+align-items:center;
+overflow:hidden;
+position:relative;
+
+}
+
+.contact-card{
+
+width:430px;
+padding:40px;
+border-radius:30px;
+background:rgba(255,255,255,.25);
+backdrop-filter:blur(15px);
+border:2px solid rgba(255,255,255,.5);
+box-shadow:0 15px 40px rgba(0,0,0,.25);
+text-align:center;
+z-index:5;
+animation:show 1.3s;
+
+}
+
+.contact-card h1{
+
+color:#00695c;
+font-size:40px;
+margin-bottom:15px;
+
+}
+
+.subtitle{
+
+color:#555;
+margin-bottom:35px;
+font-size:17px;
+
+}
+
+.info{
+
+display:flex;
+align-items:center;
+padding:18px;
+margin:18px 0;
+background:white;
+border-radius:18px;
+transition:.4s;
+cursor:pointer;
+
+}
+
+.info:hover{
+
+transform:translateY(-8px) scale(1.03);
+background:#80cbc4;
+color:white;
+box-shadow:0 15px 30px rgba(0,0,0,.25);
+
+}
+
+.info span{
+
+font-size:35px;
+margin-right:18px;
+
+}
+
+.info h3{
+
+font-size:18px;
+margin-bottom:5px;
+
+}
+
+.info p{
+
+font-size:16px;
+
+}
+
+/* ใบไม้ */
+
+.leaf{
+
+position:absolute;
+font-size:38px;
+top:-60px;
+animation:fall linear infinite;
+
+}
+
+.leaf:nth-child(1){
+
+left:5%;
+animation-duration:9s;
+
+}
+
+.leaf:nth-child(2){
+
+left:18%;
+animation-duration:12s;
+animation-delay:2s;
+
+}
+
+.leaf:nth-child(3){
+
+left:30%;
+animation-duration:10s;
+animation-delay:1s;
+
+}
+
+.leaf:nth-child(4){
+
+left:45%;
+animation-duration:14s;
+animation-delay:3s;
+
+}
+
+.leaf:nth-child(5){
+
+left:60%;
+animation-duration:11s;
+animation-delay:5s;
+
+}
+
+.leaf:nth-child(6){
+
+left:75%;
+animation-duration:13s;
+animation-delay:2s;
+
+}
+
+.leaf:nth-child(7){
+
+left:88%;
+animation-duration:10s;
+animation-delay:4s;
+
+}
+
+.leaf:nth-child(8){
+
+left:97%;
+animation-duration:9s;
+animation-delay:1s;
+
+}
+
+@keyframes fall{
+
+0%{
+
+transform:translateY(-100px) rotate(0deg);
+opacity:0;
+
+}
+
+10%{
+
+opacity:1;
+
+}
+
+100%{
+
+transform:translateY(120vh) translateX(60px) rotate(360deg);
+opacity:.8;
+
+}
+
+}
+
+@keyframes show{
+
+from{
+
+opacity:0;
+transform:translateY(80px);
+
+}
+
+to{
+
+opacity:1;
+transform:translateY(0);
+
+}
+
+}
+
+</style>
