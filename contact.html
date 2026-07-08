@@ -1,143 +1,58 @@
-<section class="contact-section">
+<!DOCTYPE html>
+<html lang="th">
 
-    <!-- เอฟเฟกต์ใบไม้ -->
-    <div class="leaf">🍃</div>
-    <div class="leaf">🍂</div>
-    <div class="leaf">🍃</div>
-    <div class="leaf">🍂</div>
-    <div class="leaf">🍃</div>
-    <div class="leaf">🍂</div>
-    <div class="leaf">🍃</div>
-    <div class="leaf">🍂</div>
+<head>
 
-    <div class="contact-card">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <h1>📞 Contact Me</h1>
-
-        <p class="subtitle">
-            สามารถติดต่อฉันได้ตามช่องทางด้านล่าง
-        </p>
-
-        <div class="info">
-            <span>📱</span>
-            <div>
-                <h3>Phone</h3>
-                <p>061-821-9692</p>
-            </div>
-        </div>
-
-        <div class="info">
-            <span>✉️</span>
-            <div>
-                <h3>Email</h3>
-                <p>veesesri552@gmail.com</p>
-            </div>
-        </div>
-
-        <div class="info">
-            <span>💚</span>
-            <div>
-                <h3>Line</h3>
-                <p>veesit522.t5262t</p>
-            </div>
-        </div>
-
-    </div>
-
-</section>
+<title>ช่องทางติดต่อ | สุรัสวดี วิเศษศรี</title>
 
 <style>
 
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Segoe UI',sans-serif;
+    box-sizing:border-box;
 }
 
-.contact-section{
+body{
 
-width:100%;
-min-height:100vh;
-background:linear-gradient(135deg,#80cbc4,#e0f2f1);
-display:flex;
-justify-content:center;
-align-items:center;
-overflow:hidden;
-position:relative;
+    margin:0;
+    font-family:Tahoma,sans-serif;
+    background:
+    linear-gradient(135deg,#80cbc4,#e0f2f1);
 
-}
+    min-height:100vh;
 
-.contact-card{
+    display:flex;
 
-width:430px;
-padding:40px;
-border-radius:30px;
-background:rgba(255,255,255,.25);
-backdrop-filter:blur(15px);
-border:2px solid rgba(255,255,255,.5);
-box-shadow:0 15px 40px rgba(0,0,0,.25);
-text-align:center;
-z-index:5;
-animation:show 1.3s;
+    justify-content:center;
+
+    align-items:center;
+
+    overflow:hidden;
 
 }
 
-.contact-card h1{
+/* แสงพื้นหลัง */
 
-color:#00695c;
-font-size:40px;
-margin-bottom:15px;
+body::before{
 
-}
+    content:"";
+    position:absolute;
 
-.subtitle{
+    width:500px;
+    height:500px;
 
-color:#555;
-margin-bottom:35px;
-font-size:17px;
+    background:white;
 
-}
+    opacity:.25;
 
-.info{
+    border-radius:50%;
 
-display:flex;
-align-items:center;
-padding:18px;
-margin:18px 0;
-background:white;
-border-radius:18px;
-transition:.4s;
-cursor:pointer;
+    filter:blur(80px);
 
-}
-
-.info:hover{
-
-transform:translateY(-8px) scale(1.03);
-background:#80cbc4;
-color:white;
-box-shadow:0 15px 30px rgba(0,0,0,.25);
-
-}
-
-.info span{
-
-font-size:35px;
-margin-right:18px;
-
-}
-
-.info h3{
-
-font-size:18px;
-margin-bottom:5px;
-
-}
-
-.info p{
-
-font-size:16px;
+    top:10%;
+    left:10%;
 
 }
 
@@ -145,97 +60,128 @@ font-size:16px;
 
 .leaf{
 
-position:absolute;
-font-size:38px;
-top:-60px;
-animation:fall linear infinite;
+    position:absolute;
+
+    font-size:45px;
+
+    color:white;
+
+    opacity:.8;
+
+    text-shadow:0 0 10px white;
+
+    animation:leafMove linear infinite;
 
 }
 
 .leaf:nth-child(1){
 
-left:5%;
-animation-duration:9s;
+    left:5%;
+    animation-duration:10s;
 
 }
 
 .leaf:nth-child(2){
 
-left:18%;
-animation-duration:12s;
-animation-delay:2s;
+    left:20%;
+    animation-duration:14s;
+    font-size:35px;
 
 }
 
 .leaf:nth-child(3){
 
-left:30%;
-animation-duration:10s;
-animation-delay:1s;
+    left:40%;
+    animation-duration:11s;
+    font-size:55px;
 
 }
 
 .leaf:nth-child(4){
 
-left:45%;
-animation-duration:14s;
-animation-delay:3s;
+    left:65%;
+    animation-duration:15s;
 
 }
 
 .leaf:nth-child(5){
 
-left:60%;
-animation-duration:11s;
-animation-delay:5s;
+    left:85%;
+    animation-duration:12s;
+    font-size:40px;
 
 }
 
-.leaf:nth-child(6){
-
-left:75%;
-animation-duration:13s;
-animation-delay:2s;
-
-}
-
-.leaf:nth-child(7){
-
-left:88%;
-animation-duration:10s;
-animation-delay:4s;
-
-}
-
-.leaf:nth-child(8){
-
-left:97%;
-animation-duration:9s;
-animation-delay:1s;
-
-}
-
-@keyframes fall{
+@keyframes leafMove{
 
 0%{
 
-transform:translateY(-100px) rotate(0deg);
-opacity:0;
+top:110%;
+
+transform:
+translateX(0)
+rotate(0deg);
 
 }
 
-10%{
+25%{
 
-opacity:1;
+transform:
+translateX(50px)
+rotate(90deg);
+
+}
+
+50%{
+
+transform:
+translateX(-50px)
+rotate(180deg);
+
+}
+
+75%{
+
+transform:
+translateX(50px)
+rotate(270deg);
 
 }
 
 100%{
 
-transform:translateY(120vh) translateX(60px) rotate(360deg);
-opacity:.8;
+top:-20%;
+
+transform:
+translateX(0)
+rotate(360deg);
 
 }
+
+}
+
+/* กล่อง */
+
+.container{
+
+    width:850px;
+    max-width:90%;
+
+    background:rgba(255,255,255,.92);
+
+    border-radius:35px;
+
+    padding:40px;
+
+    text-align:center;
+
+    position:relative;
+
+    z-index:2;
+
+    box-shadow:0 20px 40px rgba(0,0,0,.25);
+
+    animation:show 1s;
 
 }
 
@@ -244,52 +190,324 @@ opacity:.8;
 from{
 
 opacity:0;
-transform:translateY(80px);
+
+transform:
+translateY(40px)
+scale(.9);
 
 }
 
 to{
 
 opacity:1;
-transform:translateY(0);
+
+transform:
+translateY(0)
+scale(1);
+
+}
+
+}
+
+h1{
+
+    color:#00695c;
+
+    font-size:40px;
+
+    margin-bottom:10px;
+
+    text-shadow:0 3px 5px rgba(0,0,0,.15);
+
+}
+
+.subtitle{
+
+    color:#555;
+
+    margin-bottom:30px;
+
+    font-size:18px;
+
+}
+
+/* กล่องข้อมูล */
+
+.contact-box{
+
+    background:
+    linear-gradient(135deg,#e0f2f1,#ffffff);
+
+    padding:20px;
+
+    border-radius:25px;
+
+    box-shadow:
+    inset 0 0 15px rgba(38,166,154,.2);
+
+}
+
+/* การ์ด */
+
+.card{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    background:white;
+
+    padding:18px 25px;
+
+    border-radius:18px;
+
+    margin:18px 0;
+
+    box-shadow:0 8px 18px rgba(0,0,0,.12);
+
+    transition:.35s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:0 15px 25px rgba(0,0,0,.2);
+
+}
+
+.left{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    font-size:20px;
+
+    color:#333;
+
+}
+
+.icon{
+
+    font-size:35px;
+
+}
+
+.value{
+
+    font-weight:bold;
+
+}
+
+.open{
+
+    background:#26a69a;
+
+    color:white;
+
+    padding:10px 22px;
+
+    border-radius:25px;
+
+    text-decoration:none;
+
+    transition:.3s;
+
+    font-weight:bold;
+
+}
+
+.open:hover{
+
+    background:#00695c;
+
+}
+
+/* ปุ่มกลับ */
+
+.back{
+
+    display:inline-block;
+
+    margin-top:30px;
+
+    padding:14px 35px;
+
+    background:#26a69a;
+
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:30px;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+    box-shadow:0 8px 15px rgba(0,0,0,.25);
+
+}
+
+.back:hover{
+
+    background:#00695c;
+
+    transform:translateY(-6px);
+
+    box-shadow:0 15px 25px rgba(0,0,0,.35);
+
+}
+
+@media(max-width:700px){
+
+.card{
+
+flex-direction:column;
+
+gap:15px;
+
+text-align:center;
+
+}
+
+.left{
+
+flex-direction:column;
 
 }
 
 }
 
 </style>
-portfolio/
-│── index.html
-│── style.css
-│── script.js
-│── images/
-    └── profile.jpg
-.back-circle{
-    position:fixed;
-    top:20px;
-    left:20px;
-    width:55px;
-    height:55px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    border-radius:50%;
-    background:rgba(255,255,255,.3);
-    backdrop-filter:blur(10px);
-    color:#00695c;
-    text-decoration:none;
-    font-size:28px;
-    font-weight:bold;
-    transition:.3s;
-    box-shadow:0 0 15px rgba(0,0,0,.2);
-    z-index:999;
-}
 
-.back-circle:hover{
-    background:#80cbc4;
-    color:white;
-    transform:rotate(-10deg) scale(1.15);
-    box-shadow:0 0 20px #80cbc4,
-               0 0 40px #80cbc4,
-               0 0 60px #80cbc4;
-}
+</head>
+
+<body>
+
+<div class="leaf">🍃</div>
+<div class="leaf">🌿</div>
+<div class="leaf">🍃</div>
+<div class="leaf">🌱</div>
+<div class="leaf">🍀</div>
+
+<div class="container">
+
+<h1>📱 ช่องทางติดต่อ 📱</h1>
+
+<p class="subtitle">
+สามารถติดต่อหรือพูดคุยกับเราได้ผ่านช่องทางด้านล่างนี้ 💚
+</p>
+
+<div class="contact-box">
+
+<div class="card">
+
+<div class="left">
+
+<div class="icon">📸</div>
+
+<div>
+
+<div class="value">Instagram</div>
+
+<div>@sv.mo_09</div>
+
+</div>
+
+</div>
+
+<a class="open"
+href="https://www.instagram.com/sv.mo_09"
+target="_blank">
+เปิดโปรไฟล์
+</a>
+
+</div>
+
+<div class="card">
+
+<div class="left">
+
+<div class="icon">💬</div>
+
+<div>
+
+<div class="value">Line</div>
+
+<div>veesit522</div>
+
+</div>
+
+</div>
+
+<a class="open"
+href="https://line.me/ti/p/~veesit522"
+target="_blank">
+เพิ่มเพื่อน
+</a>
+
+</div>
+
+<div class="card">
+
+<div class="left">
+
+<div class="icon">📧</div>
+
+<div>
+
+<div class="value">Email</div>
+
+<div>veesesri552@gmail.com</div>
+
+</div>
+
+</div>
+
+<a class="open"
+href="mailto:veesesri552@gmail.com">
+ส่งอีเมล
+</a>
+
+</div>
+
+<div class="card">
+
+<div class="left">
+
+<div class="icon">📞</div>
+
+<div>
+
+<div class="value">เบอร์โทรศัพท์</div>
+
+<div>061-821-9692</div>
+
+</div>
+
+</div>
+
+<a class="open"
+href="tel:0618219692">
+โทรเลย
+</a>
+
+</div>
+
+</div>
+
+<a class="back" href="index.html">
+🏠 กลับหน้าหลัก
+</a>
+
+</div>
+
+</body>
+</html>
