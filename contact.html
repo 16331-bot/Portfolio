@@ -264,3 +264,32 @@ portfolio/
 │── script.js
 │── images/
     └── profile.jpg
+.back-circle{
+    position:fixed;
+    top:20px;
+    left:20px;
+    width:55px;
+    height:55px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:50%;
+    background:rgba(255,255,255,.3);
+    backdrop-filter:blur(10px);
+    color:#00695c;
+    text-decoration:none;
+    font-size:28px;
+    font-weight:bold;
+    transition:.3s;
+    box-shadow:0 0 15px rgba(0,0,0,.2);
+    z-index:999;
+}
+
+.back-circle:hover{
+    background:#80cbc4;
+    color:white;
+    transform:rotate(-10deg) scale(1.15);
+    box-shadow:0 0 20px #80cbc4,
+               0 0 40px #80cbc4,
+               0 0 60px #80cbc4;
+}
