@@ -268,9 +268,47 @@ h1{
 
 .box p{
 
-    font-size:18px;
+    .school-info{
 
-    color:#444;
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+}
+
+.school-info img{
+
+    width:70px;
+
+    height:70px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    background:white;
+
+    padding:6px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+
+    transition:.3s;
+
+}
+
+.box:hover .school-info img{
+
+    transform:rotate(8deg) scale(1.08);
+
+}
+
+.school-text{
+
+    flex:1;
+
+}
 
 }
 
@@ -351,9 +389,19 @@ h1{
 
 <h2>🌱 ระดับอนุบาล</h2>
 
+<div class="school-info">
+
+<img src="wawawa.png" alt="โลโก้โรงเรียนวัฒนานุศาสน์">
+
+<div class="school-text">
+
 <p>
 โรงเรียนวัฒนานุศาสน์
 </p>
+
+</div>
+
+</div>
 
 </div>
 
@@ -363,9 +411,19 @@ h1{
 
 <h2>📚 ระดับประถมศึกษา</h2>
 
+<div class="school-info">
+
+<img src="wawawa.png" alt="โลโก้โรงเรียนวัฒนานุศาสน์">
+
+<div class="school-text">
+
 <p>
 โรงเรียนวัฒนานุศาสน์
 </p>
+
+</div>
+
+</div>
 
 </div>
 
@@ -375,9 +433,19 @@ h1{
 
 <h2>📖 ระดับมัธยมศึกษาตอนต้น</h2>
 
+<div class="school-info">
+
+<img src="wawawa.png" alt="โลโก้โรงเรียนวัฒนานุศาสน์">
+
+<div class="school-text">
+
 <p>
 โรงเรียนวัฒนานุศาสน์
 </p>
+
+</div>
+
+</div>
 
 </div>
 
@@ -387,18 +455,25 @@ h1{
 
 <h2>🎓 ระดับมัธยมศึกษาตอนปลาย</h2>
 
+<div class="school-info">
+
+<img src="phanthong.jpg" alt="โลโก้โรงเรียนพานทอง">
+
+<div class="school-text">
+
 <p>
+
 โรงเรียนพานทอง
 <br>
 ปัจจุบันศึกษาอยู่ชั้นมัธยมศึกษาปีที่ 6/1
+
 </p>
 
 </div>
 
-
-
 </div>
 
+</div>
 
 
 <a class="back" href="index.html">
