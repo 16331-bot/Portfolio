@@ -1,223 +1,467 @@
 <!DOCTYPE html>
 <html lang="th">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ประวัติส่วนตัว สุรัสวดี วิเศษศรี</title>
+
+<title>Portfolio สุรัสวดี วิเศษศรี</title>
 
 <style>
 
 *{
+    box-sizing:border-box;
     margin:0;
     padding:0;
-    box-sizing:border-box;
 }
 
 body{
+
     font-family:Tahoma,sans-serif;
-    background:linear-gradient(135deg,#80cbc4,#e0f7fa,#ffffff);
+
+    background:
+    linear-gradient(135deg,#80cbc4,#e0f2f1);
+
     min-height:100vh;
+
     display:flex;
+
     justify-content:center;
+
     align-items:center;
-    overflow:hidden;
+
+    overflow:auto;
+
 }
+
 
 /* แสงพื้นหลัง */
+
 body::before{
+
     content:"";
+
     position:absolute;
-    width:600px;
-    height:600px;
+
+    width:500px;
+
+    height:500px;
+
     background:white;
-    opacity:.25;
+
+    opacity:.3;
+
     border-radius:50%;
-    filter:blur(100px);
-    top:-150px;
-    left:-150px;
+
+    filter:blur(80px);
+
+    top:5%;
+
+    left:5%;
+
 }
 
-body::after{
-    content:"";
-    position:absolute;
-    width:500px;
-    height:500px;
-    background:#4db6ac;
-    opacity:.15;
-    border-radius:50%;
-    filter:blur(100px);
-    bottom:-150px;
-    right:-150px;
-}
+
 
 /* ใบไม้ */
+
 .leaf{
+
     position:absolute;
-    font-size:40px;
+
+    font-size:45px;
+
     animation:leafMove linear infinite;
+
     opacity:.8;
+
 }
 
-.leaf:nth-child(1){left:5%;animation-duration:12s;}
-.leaf:nth-child(2){left:20%;animation-duration:15s;}
-.leaf:nth-child(3){left:45%;animation-duration:10s;font-size:55px;}
-.leaf:nth-child(4){left:70%;animation-duration:13s;}
-.leaf:nth-child(5){left:90%;animation-duration:11s;}
+
+.leaf:nth-child(1){
+
+    left:5%;
+
+    animation-duration:12s;
+
+}
+
+
+.leaf:nth-child(2){
+
+    left:25%;
+
+    animation-duration:15s;
+
+}
+
+
+.leaf:nth-child(3){
+
+    left:50%;
+
+    animation-duration:10s;
+
+}
+
+
+.leaf:nth-child(4){
+
+    left:75%;
+
+    animation-duration:13s;
+
+}
+
+
+.leaf:nth-child(5){
+
+    left:90%;
+
+    animation-duration:11s;
+
+}
+
+
 
 @keyframes leafMove{
 
+
 0%{
+
     top:110%;
-    transform:translateX(0) rotate(0deg);
+
+    transform:rotate(0deg);
+
 }
 
-50%{
-    transform:translateX(50px) rotate(180deg);
-}
 
 100%{
+
     top:-20%;
-    transform:translateX(-50px) rotate(360deg);
-}
+
+    transform:rotate(360deg);
 
 }
+
+
+}
+
+
 
 /* กล่องหลัก */
+
 .container{
-    width:850px;
-    max-width:92%;
+
+    width:900px;
+
+    max-width:95%;
+
     background:rgba(255,255,255,.92);
-    backdrop-filter:blur(12px);
-    border-radius:30px;
+
     padding:40px;
-    text-align:center;
-    box-shadow:0 20px 40px rgba(0,0,0,.25);
-    animation:show 1s;
+
+    border-radius:35px;
+
+    box-shadow:
+    0 20px 40px rgba(0,0,0,.25);
+
     z-index:2;
+
+    margin:40px 0;
+
+    animation:show 1s;
+
 }
+
 
 @keyframes show{
 
 from{
-    opacity:0;
-    transform:translateY(40px);
+
+opacity:0;
+
+transform:translateY(50px);
+
 }
 
 to{
-    opacity:1;
-    transform:translateY(0);
+
+opacity:1;
+
+transform:translateY(0);
+
 }
 
 }
+
+
+
+/* รูปโปรไฟล์ */
 
 .profile{
+
     width:160px;
+
     height:160px;
+
     border-radius:50%;
-    border:6px solid #26a69a;
+
     object-fit:cover;
+
+    border:6px solid #26a69a;
+
     box-shadow:0 10px 25px rgba(0,0,0,.25);
-    margin-bottom:20px;
+
 }
+
+
 
 h1{
+
+    text-align:center;
+
+    margin:20px;
+
     color:#00695c;
-    font-size:38px;
-    margin-bottom:20px;
+
+    font-size:40px;
+
 }
+
+
+
+/* ข้อมูล */
 
 .profile-box{
-    background:linear-gradient(135deg,#e0f2f1,#ffffff);
-    border-radius:25px;
+
+    background:
+    linear-gradient(135deg,#e0f2f1,#fff);
+
     padding:25px;
-    text-align:left;
-    box-shadow:inset 0 0 15px rgba(0,150,136,.15);
+
+    border-radius:25px;
+
 }
+
 
 .profile-box p{
+
     font-size:20px;
-    line-height:2;
+
     color:#444;
+
+    line-height:2;
+
 }
+
 
 .icon{
-    color:#00796b;
+
+    color:#00695c;
+
     font-weight:bold;
+
 }
 
-/* การ์ดสกิล */
-.skill-box{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:18px;
-    margin-top:20px;
+
+
+/* สกิล */
+
+.skill-title{
+
+    margin-top:25px;
+
+    font-size:25px;
+
+    color:#00695c;
+
+    font-weight:bold;
+
 }
+
+
+
+.skill-box{
+
+    margin-top:20px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+
+
+.skill-item{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+}
+
+
 
 .skill-card{
-    background:linear-gradient(135deg,#26a69a,#4db6ac);
+
+    flex:1;
+
+    background:
+
+    linear-gradient(135deg,#26a69a,#80cbc4);
+
     color:white;
-    border-radius:20px;
+
     padding:20px;
-    text-align:center;
-    transition:.35s;
-    box-shadow:0 8px 18px rgba(0,0,0,.2);
+
+    border-radius:25px;
+
+    box-shadow:
+    0 10px 20px rgba(0,0,0,.2);
+
+    transition:.3s;
+
 }
+
 
 .skill-card:hover{
-    transform:translateY(-10px) scale(1.05);
-    box-shadow:0 18px 30px rgba(0,0,0,.35);
+
+    transform:translateY(-8px);
+
 }
+
+
 
 .skill-card span{
+
     font-size:45px;
-    display:block;
-    margin-bottom:10px;
+
 }
+
+
 
 .skill-card h3{
-    margin-bottom:10px;
+
+    margin:10px 0;
+
+    font-size:25px;
+
 }
+
 
 .skill-card p{
+
     color:white;
+
     font-size:16px;
+
 }
 
-/* ปุ่ม */
-.back{
-    display:inline-block;
-    margin-top:30px;
-    padding:14px 35px;
-    background:#26a69a;
-    color:white;
-    text-decoration:none;
-    border-radius:30px;
-    font-weight:bold;
+
+
+/* รูปผลงาน */
+
+.skill-image{
+
+    width:200px;
+
+    height:160px;
+
+    object-fit:cover;
+
+    border-radius:25px;
+
+    border:5px solid #26a69a;
+
+    box-shadow:
+    0 10px 20px rgba(0,0,0,.25);
+
     transition:.3s;
-    box-shadow:0 10px 20px rgba(0,0,0,.2);
+
 }
+
+
+.skill-image:hover{
+
+    transform:scale(1.08);
+
+}
+
+
+
+/* ปุ่มกลับ */
+
+.back{
+
+    display:block;
+
+    width:200px;
+
+    text-align:center;
+
+    margin:30px auto 0;
+
+    padding:15px;
+
+    background:#26a69a;
+
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:30px;
+
+    font-weight:bold;
+
+}
+
 
 .back:hover{
+
     background:#00695c;
-    transform:translateY(-5px);
+
 }
+
+
+
+/* มือถือ */
 
 @media(max-width:700px){
 
-.skill-box{
-    grid-template-columns:1fr;
-}
 
-.profile-box{
-    text-align:center;
-}
+.skill-item{
+
+    flex-direction:column;
 
 }
+
+
+.skill-image{
+
+    width:100%;
+
+    height:220px;
+
+}
+
+
+}
+
 
 </style>
+
 </head>
 
+
 <body>
+
 
 <div class="leaf">🍃</div>
 <div class="leaf">🌿</div>
@@ -225,60 +469,166 @@ h1{
 <div class="leaf">🌱</div>
 <div class="leaf">🍃</div>
 
+
+
 <div class="container">
 
-    <!-- เปลี่ยน profile.jpg เป็นรูปของคุณ -->
-    <img src="profile.jpg" alt="รูปโปรไฟล์" class="profile">
 
-    <h1>🌿 ประวัติส่วนตัว 🌿</h1>
+<center>
 
-    <div class="profile-box">
+<img src="profile.jpg" class="profile">
 
-        <p><span class="icon">👤 ชื่อ :</span> สุรัสวดี วิเศษศรี</p>
+</center>
 
-        <p><span class="icon">💗 ชื่อเล่น :</span> โม</p>
 
-        <p><span class="icon">📞 เบอร์โทร :</span> 0618219692</p>
+<h1>
+🌿 Portfolio สุรัสวดี วิเศษศรี 🌿
+</h1>
 
-        <p><span class="icon">🎓 ระดับชั้น :</span> มัธยมศึกษาปีที่ 6/1</p>
 
-        <br>
 
-        <p><span class="icon">💡 สกิล / ความสามารถพิเศษ</span></p>
+<div class="profile-box">
 
-        <div class="skill-box">
 
-            <div class="skill-card">
-                <span>🎨</span>
-                <h3>วาดรูป</h3>
-                <p>สามารถวาดภาพและสร้างสรรค์งานศิลปะได้</p>
-            </div>
+<p>
+<span class="icon">👤 ชื่อ :</span>
+สุรัสวดี วิเศษศรี
+</p>
 
-            <div class="skill-card">
-                <span>🖌️</span>
-                <h3>ออกแบบ</h3>
-                <p>ออกแบบโปสเตอร์ โลโก้ และงานกราฟิก</p>
-            </div>
 
-            <div class="skill-card">
-                <span>📷</span>
-                <h3>Adobe Photoshop</h3>
-                <p>แต่งภาพ รีทัช และสร้างงานกราฟิก</p>
-            </div>
+<p>
+<span class="icon">💗 ชื่อเล่น :</span>
+โม
+</p>
 
-            <div class="skill-card">
-                <span>🎬</span>
-                <h3>ตัดต่อคลิป</h3>
-                <p>ตัดต่อวิดีโอและทำคอนเทนต์ได้</p>
-            </div>
 
-        </div>
+<p>
+<span class="icon">📞 เบอร์โทร :</span>
+0618219692
+</p>
 
-    </div>
 
-    <a href="index.html" class="back">🏠 กลับหน้าหลัก</a>
+<p>
+<span class="icon">🎓 ระดับชั้น :</span>
+มัธยมศึกษาปีที่ 6/1
+</p>
+
+
+
+
+<div class="skill-title">
+
+💡 สกิล / ความสามารถพิเศษ
 
 </div>
 
+
+
+<div class="skill-box">
+
+
+
+<div class="skill-item">
+
+<div class="skill-card">
+
+<span>🎨</span>
+
+<h3>วาดรูป</h3>
+
+<p>
+สามารถวาดภาพและสร้างผลงานศิลปะ
+</p>
+
+</div>
+
+<img src="drawing.jpg" class="skill-image">
+
+</div>
+
+
+
+
+
+<div class="skill-item">
+
+<div class="skill-card">
+
+<span>🖌️</span>
+
+<h3>ออกแบบ</h3>
+
+<p>
+ออกแบบโปสเตอร์ โลโก้ และงานกราฟิก
+</p>
+
+</div>
+
+<img src="design.jpg" class="skill-image">
+
+</div>
+
+
+
+
+
+<div class="skill-item">
+
+<div class="skill-card">
+
+<span>📷</span>
+
+<h3>Adobe Photoshop</h3>
+
+<p>
+แต่งภาพและสร้างงานออกแบบ
+</p>
+
+</div>
+
+<img src="photoshop.jpg" class="skill-image">
+
+</div>
+
+
+
+
+
+<div class="skill-item">
+
+<div class="skill-card">
+
+<span>🎬</span>
+
+<h3>ตัดต่อคลิป</h3>
+
+<p>
+ตัดต่อวิดีโอและสร้างคอนเทนต์
+</p>
+
+</div>
+
+<img src="video.jpg" class="skill-image">
+
+</div>
+
+
+
+</div>
+
+
+</div>
+
+
+<a href="index.html" class="back">
+🏠 กลับหน้าหลัก
+</a>
+
+
+
+</div>
+
+
 </body>
+
 </html>
