@@ -1,475 +1,284 @@
 <!DOCTYPE html>
 <html lang="th">
-
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>ประวัติส่วนตัว สุรัสวดี วิเศษศรี</title>
-
 
 <style>
 
 *{
+    margin:0;
+    padding:0;
     box-sizing:border-box;
 }
 
-
 body{
-
-    margin:0;
-
     font-family:Tahoma,sans-serif;
-
-    background:
-    linear-gradient(135deg,#80cbc4,#e0f2f1);
-
+    background:linear-gradient(135deg,#80cbc4,#e0f7fa,#ffffff);
     min-height:100vh;
-
     display:flex;
-
     justify-content:center;
-
     align-items:center;
-
     overflow:hidden;
-
 }
-
-
 
 /* แสงพื้นหลัง */
-
 body::before{
-
     content:"";
-
     position:absolute;
-
-    width:500px;
-
-    height:500px;
-
+    width:600px;
+    height:600px;
     background:white;
-
-    opacity:0.25;
-
+    opacity:.25;
     border-radius:50%;
-
-    filter:blur(80px);
-
-    top:10%;
-
-    left:10%;
-
+    filter:blur(100px);
+    top:-150px;
+    left:-150px;
 }
 
-
-
-/* ใบไม้สีขาว */
-
-.leaf{
-
+body::after{
+    content:"";
     position:absolute;
-
-    color:white;
-
-    font-size:45px;
-
-    opacity:0.8;
-
-    animation:leafMove linear infinite;
-
-    text-shadow:
-    0 0 10px white;
-
+    width:500px;
+    height:500px;
+    background:#4db6ac;
+    opacity:.15;
+    border-radius:50%;
+    filter:blur(100px);
+    bottom:-150px;
+    right:-150px;
 }
 
-
-
-/* ตำแหน่งใบไม้ */
-
-.leaf:nth-child(1){
-
-    left:5%;
-
-    animation-duration:10s;
-
-}
-
-
-.leaf:nth-child(2){
-
-    left:20%;
-
-    animation-duration:14s;
-
-    font-size:35px;
-
-}
-
-
-.leaf:nth-child(3){
-
-    left:40%;
-
-    animation-duration:11s;
-
-    font-size:55px;
-
-}
-
-
-.leaf:nth-child(4){
-
-    left:65%;
-
-    animation-duration:15s;
-
-}
-
-
-.leaf:nth-child(5){
-
-    left:85%;
-
-    animation-duration:12s;
-
+/* ใบไม้ */
+.leaf{
+    position:absolute;
     font-size:40px;
-
+    animation:leafMove linear infinite;
+    opacity:.8;
 }
 
-
-
-/* เอฟเฟกต์ลอย */
+.leaf:nth-child(1){left:5%;animation-duration:12s;}
+.leaf:nth-child(2){left:20%;animation-duration:15s;}
+.leaf:nth-child(3){left:45%;animation-duration:10s;font-size:55px;}
+.leaf:nth-child(4){left:70%;animation-duration:13s;}
+.leaf:nth-child(5){left:90%;animation-duration:11s;}
 
 @keyframes leafMove{
 
-
 0%{
-
     top:110%;
-
-    transform:
-    translateX(0)
-    rotate(0deg);
-
+    transform:translateX(0) rotate(0deg);
 }
-
-
-25%{
-
-    transform:
-    translateX(50px)
-    rotate(90deg);
-
-}
-
 
 50%{
-
-    transform:
-    translateX(-50px)
-    rotate(180deg);
-
+    transform:translateX(50px) rotate(180deg);
 }
-
-
-75%{
-
-    transform:
-    translateX(50px)
-    rotate(270deg);
-
-}
-
 
 100%{
-
     top:-20%;
-
-    transform:
-    translateX(0)
-    rotate(360deg);
-
+    transform:translateX(-50px) rotate(360deg);
 }
 
-
 }
-
-
-
 
 /* กล่องหลัก */
-
 .container{
-
-    width:800px;
-
-    max-width:90%;
-
-    background:
-    rgba(255,255,255,0.9);
-
+    width:850px;
+    max-width:92%;
+    background:rgba(255,255,255,.92);
+    backdrop-filter:blur(12px);
+    border-radius:30px;
     padding:40px;
-
-    border-radius:35px;
-
     text-align:center;
-
-    position:relative;
-
-    z-index:2;
-
-
-    box-shadow:
-
-    0 20px 40px rgba(0,0,0,0.25);
-
-
+    box-shadow:0 20px 40px rgba(0,0,0,.25);
     animation:show 1s;
-
+    z-index:2;
 }
-
-
 
 @keyframes show{
 
-
 from{
-
     opacity:0;
-
-    transform:
-    translateY(50px)
-    scale(0.9);
-
+    transform:translateY(40px);
 }
-
 
 to{
-
     opacity:1;
-
-    transform:
-    translateY(0)
-    scale(1);
+    transform:translateY(0);
+}
 
 }
 
-
+.profile{
+    width:160px;
+    height:160px;
+    border-radius:50%;
+    border:6px solid #26a69a;
+    object-fit:cover;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+    margin-bottom:20px;
 }
-
-
-
-/* หัวข้อ */
 
 h1{
-
     color:#00695c;
-
-    font-size:40px;
-
-    text-shadow:
-    0 3px 5px rgba(0,0,0,0.15);
-
+    font-size:38px;
+    margin-bottom:20px;
 }
-
-
-
-/* กล่องข้อมูล */
 
 .profile-box{
-
-    background:
-
-    linear-gradient(
-    135deg,
-    #e0f2f1,
-    #ffffff
-    );
-
-
-    padding:25px;
-
+    background:linear-gradient(135deg,#e0f2f1,#ffffff);
     border-radius:25px;
-
+    padding:25px;
     text-align:left;
-
-    margin-top:25px;
-
-
-    box-shadow:
-
-    inset 0 0 15px rgba(38,166,154,0.2);
-
-
+    box-shadow:inset 0 0 15px rgba(0,150,136,.15);
 }
-
-
 
 .profile-box p{
-
     font-size:20px;
-
+    line-height:2;
     color:#444;
-
-    line-height:1.8;
-
 }
-
-
 
 .icon{
-
-    color:#00695c;
-
+    color:#00796b;
     font-weight:bold;
-
 }
 
+/* การ์ดสกิล */
+.skill-box{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:18px;
+    margin-top:20px;
+}
 
-
-/* ปุ่มกลับ */
-
-.back{
-
-    display:inline-block;
-
-    margin-top:30px;
-
-    padding:14px 35px;
-
-    background:#26a69a;
-
+.skill-card{
+    background:linear-gradient(135deg,#26a69a,#4db6ac);
     color:white;
-
-    text-decoration:none;
-
-    border-radius:30px;
-
-    font-weight:bold;
-
-
-    box-shadow:
-
-    0 8px 15px rgba(0,0,0,0.25);
-
-
-    transition:.3s;
-
+    border-radius:20px;
+    padding:20px;
+    text-align:center;
+    transition:.35s;
+    box-shadow:0 8px 18px rgba(0,0,0,.2);
 }
 
+.skill-card:hover{
+    transform:translateY(-10px) scale(1.05);
+    box-shadow:0 18px 30px rgba(0,0,0,.35);
+}
 
+.skill-card span{
+    font-size:45px;
+    display:block;
+    margin-bottom:10px;
+}
+
+.skill-card h3{
+    margin-bottom:10px;
+}
+
+.skill-card p{
+    color:white;
+    font-size:16px;
+}
+
+/* ปุ่ม */
+.back{
+    display:inline-block;
+    margin-top:30px;
+    padding:14px 35px;
+    background:#26a69a;
+    color:white;
+    text-decoration:none;
+    border-radius:30px;
+    font-weight:bold;
+    transition:.3s;
+    box-shadow:0 10px 20px rgba(0,0,0,.2);
+}
 
 .back:hover{
-
     background:#00695c;
+    transform:translateY(-5px);
+}
 
-    transform:
-    translateY(-8px);
+@media(max-width:700px){
 
-    box-shadow:
+.skill-box{
+    grid-template-columns:1fr;
+}
 
-    0 15px 25px rgba(0,0,0,0.35);
+.profile-box{
+    text-align:center;
+}
 
 }
 
-
 </style>
-
 </head>
-
 
 <body>
 
-
-<!-- ใบไม้สีขาว -->
-
 <div class="leaf">🍃</div>
-
 <div class="leaf">🌿</div>
-
-<div class="leaf">🍃</div>
-
-<div class="leaf">🌱</div>
-
 <div class="leaf">🍀</div>
-
-
+<div class="leaf">🌱</div>
+<div class="leaf">🍃</div>
 
 <div class="container">
 
+    <!-- เปลี่ยน profile.jpg เป็นรูปของคุณ -->
+    <img src="profile.jpg" alt="รูปโปรไฟล์" class="profile">
 
-<h1>🌿 ประวัติส่วนตัว 🌿</h1>
+    <h1>🌿 ประวัติส่วนตัว 🌿</h1>
 
+    <div class="profile-box">
 
+        <p><span class="icon">👤 ชื่อ :</span> สุรัสวดี วิเศษศรี</p>
 
-<div class="profile-box">
+        <p><span class="icon">💗 ชื่อเล่น :</span> โม</p>
 
+        <p><span class="icon">📞 เบอร์โทร :</span> 0618219692</p>
 
-<p>
-<span class="icon">👤 ชื่อ :</span>
-สุรัสวดี วิเศษศรี
-</p>
+        <p><span class="icon">🎓 ระดับชั้น :</span> มัธยมศึกษาปีที่ 6/1</p>
 
+        <br>
 
-<p>
-<span class="icon">💗 ชื่อเล่น :</span>
-โม
-</p>
+        <p><span class="icon">💡 สกิล / ความสามารถพิเศษ</span></p>
 
+        <div class="skill-box">
 
-<p>
-<span class="icon">📞 เบอร์โทร :</span>
-0618219692
-</p>
+            <div class="skill-card">
+                <span>🎨</span>
+                <h3>วาดรูป</h3>
+                <p>สามารถวาดภาพและสร้างสรรค์งานศิลปะได้</p>
+            </div>
 
+            <div class="skill-card">
+                <span>🖌️</span>
+                <h3>ออกแบบ</h3>
+                <p>ออกแบบโปสเตอร์ โลโก้ และงานกราฟิก</p>
+            </div>
 
-<p>
-<span class="icon">🎓 ระดับชั้น :</span>
-มัธยมศึกษาปีที่ 6/1
-</p>
+            <div class="skill-card">
+                <span>📷</span>
+                <h3>Adobe Photoshop</h3>
+                <p>แต่งภาพ รีทัช และสร้างงานกราฟิก</p>
+            </div>
 
+            <div class="skill-card">
+                <span>🎬</span>
+                <h3>ตัดต่อคลิป</h3>
+                <p>ตัดต่อวิดีโอและทำคอนเทนต์ได้</p>
+            </div>
 
-<p>
-<span class="icon">🏫 ประวัติการศึกษา :</span>
-</p>
+        </div>
 
+    </div>
 
-<p>
-
-🌱 อนุบาล : โรงเรียนวัฒนานุศาสน์
-
-<br>
-
-📚 ประถมศึกษา : โรงเรียนวัฒนานุศาสน์
-
-<br>
-
-📖 มัธยมศึกษาตอนต้น : โรงเรียนวัฒนานุศาสน์
-
-<br>
-
-🎓 มัธยมศึกษาตอนปลาย : โรงเรียนพานทอง
-
-</p>
-
+    <a href="index.html" class="back">🏠 กลับหน้าหลัก</a>
 
 </div>
-
-
-
-<a class="back" href="index.html">
-🏠 กลับหน้าหลัก
-</a>
-
-
-
-</div>
-
 
 </body>
-
 </html>
